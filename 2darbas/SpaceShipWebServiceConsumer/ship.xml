@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<starship xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ship.wsdl">
+    <shipName>Lietuva Laisva</shipName>
+    <captain>
+        <name>James T. Kirk</name>
+        <crewMemberNumber>12345</crewMemberNumber>
+        <responsibility>Commanding Officer</responsibility>
+        <interest>Exploring new worlds</interest>
+    </captain>
+    <crewMember>
+        <name>Spock</name>
+        <crewMemberNumber>23456</crewMemberNumber>
+        <responsibility>Science Officer</responsibility>
+        <interest>Logic and exploration</interest>
+    </crewMember>
+    <crewMember>
+        <name>Leonard McCoy</name>
+        <crewMemberNumber>34567</crewMemberNumber>
+        <responsibility>Chief Medical Officer</responsibility>
+        <interest>Medical research and ethics</interest>
+    </crewMember>
+    <crewMember>
+        <name>Nyota Uhura</name>
+        <crewMemberNumber>45678</crewMemberNumber>
+        <responsibility>Communications Officer</responsibility>
+        <interest>Linguistics and communications</interest>
+    </crewMember>
+    <crewMember>
+        <name>Montgomery Scott</name>
+        <crewMemberNumber>56789</crewMemberNumber>
+        <responsibility>Chief Engineer</responsibility>
+        <interest>Engineering and technology</interest>
+    </crewMember>
+    <crewMember>
+        <name>Hikaru Sulu</name>
+        <crewMemberNumber>67890</crewMemberNumber>
+        <responsibility>Helmsman</responsibility>
+        <interest>Navigation and piloting</interest>
+    </crewMember>
+    <crewMember>
+        <name>Pavel Chekov</name>
+        <crewMemberNumber>78901</crewMemberNumber>
+        <responsibility>Navigator</responsibility>
+        <interest>Astrophysics and mathematics</interest>
+    </crewMember>
+    <crewMember>
+        <name>Christine Chapel</name>
+        <crewMemberNumber>89012</crewMemberNumber>
+        <responsibility>Head Nurse</responsibility>
+        <interest>Medical care and research</interest>
+    </crewMember>
+    <crewMember>
+        <name>Gary Mitchell</name>
+        <crewMemberNumber>90123</crewMemberNumber>
+        <responsibility>Operations Officer</responsibility>
+        <interest>Operations management and strategy</interest>
+    </crewMember>
+    <crewMember>
+        <name>Elizabeth Dehner</name>
+        <crewMemberNumber>11111</crewMemberNumber>
+        <responsibility>Psychiatrist</responsibility>
+        <interest>Psychology and mental health</interest>
+    </crewMember>
+    <crewMember>
+        <name>Kelso Dimer</name>
+        <crewMemberNumber>22222</crewMemberNumber>
+        <responsibility>Security Officer</responsibility>
+        <interest>Security protocols and defense</interest>
+    </crewMember>
+    <crewMember>
+        <name>Palmer Peter</name>
+        <crewMemberNumber>33333</crewMemberNumber>
+        <responsibility>Yeoman</responsibility>
+        <interest>Administrative support and organization</interest>
+    </crewMember>
+    <crewMember>
+        <name>Galloway Glowstone</name>
+        <crewMemberNumber>44444</crewMemberNumber>
+        <responsibility>Technician</responsibility>
+        <interest>Technical support and repairs</interest>
+    </crewMember>
+    <crewMember>
+        <name>Farrell Magma</name>
+        <crewMemberNumber>55555</crewMemberNumber>
+        <responsibility>Transporter Chief</responsibility>
+        <interest>Transporter operations and maintenance</interest>
+    </crewMember>
+    <crewMember>
+        <name>Painter Blue</name>
+        <crewMemberNumber>66666</crewMemberNumber>
+        <responsibility>Artist</responsibility>
+        <interest>Visual arts and creativity</interest>
+    </crewMember>
+</starship>

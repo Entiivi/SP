@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider"
+           targetNamespace="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider"
+           elementFormDefault="qualified">
+
+    <xs:element name="getStarshipRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="shipName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getStarshipResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="starship" type="tns:starship"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="starship">
+        <xs:sequence>
+            <xs:element name="shipName" type="xs:string"/>
+            <xs:element name="captain" type="tns:crewMember"/>
+            <xs:element name="crewMember" type="tns:crewMember" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="crewMember">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="crewMemberNumber" type="xs:string"/>
+            <xs:element name="responsibility" type="xs:string"/>
+            <xs:element name="interest" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+

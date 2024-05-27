@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        -<wsdl:definitions targetNamespace="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider" xmlns:tns="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+
+    -<wsdl:types>
+
+
+    -<xs:schema targetNamespace="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider" xmlns:tns="http://viko.lt/eif/i/sakalauskas/SpaceShipWebServiceProvider" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    -<xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="getStarshipRequest">
+
+
+    -<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    -<xs:sequence xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="shipName" type="xs:string"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:element>
+
+
+    -<xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="getStarshipResponse">
+
+
+    -<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    -<xs:sequence xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="starship" type="tns:starship"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:element>
+
+
+    -<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema" name="starship">
+
+
+    -<xs:sequence xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="shipName" type="xs:string"/>
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="captain" type="tns:crewMember"/>
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="crewMember" type="tns:crewMember" maxOccurs="unbounded"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+    -<xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema" name="crewMember">
+
+
+    -<xs:sequence xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="name" type="xs:string"/>
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="crewMemberNumber" type="xs:string"/>
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="responsibility" type="xs:string"/>
+
+    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="interest" type="xs:string"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:schema>
+
+</wsdl:types>
+
+
+    -<wsdl:message name="getStarshipResponse">
+
+    <wsdl:part name="getStarshipResponse" element="tns:getStarshipResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+    -<wsdl:message name="getStarshipRequest">
+
+    <wsdl:part name="getStarshipRequest" element="tns:getStarshipRequest"> </wsdl:part>
+
+</wsdl:message>
+
+
+    -<wsdl:portType name="StarshipPort">
+
+
+    -<wsdl:operation name="getStarship">
+
+    <wsdl:input name="getStarshipRequest" message="tns:getStarshipRequest"> </wsdl:input>
+
+    <wsdl:output name="getStarshipResponse" message="tns:getStarshipResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+    -<wsdl:binding name="StarshipPortSoap11" type="tns:StarshipPort">
+
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+
+
+    -<wsdl:operation name="getStarship">
+
+    <soap:operation soapAction=""/>
+
+
+    -<wsdl:input name="getStarshipRequest">
+
+    <soap:body use="literal"/>
+
+</wsdl:input>
+
+
+    -<wsdl:output name="getStarshipResponse">
+
+    <soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+    -<wsdl:service name="StarshipPortService">
+
+
+    -<wsdl:port name="StarshipPortSoap11" binding="tns:StarshipPortSoap11">
+
+    <soap:address location="/starship"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>
